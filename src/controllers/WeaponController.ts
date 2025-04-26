@@ -19,10 +19,10 @@ class WeaponController {
     }
   }
 
-  getWeaponByType(type: string): Response {
-    const weaponFound = weaponData.find((item) => item.type && item.type.toLowerCase() === type);
+  getWeaponsByType(type: string): Response {
+    const weaponFound = weaponData.filter((item) => item.type && item.type.toLowerCase() === type);
     if (weaponFound) {
-      return Response.json(Weapon.fromJson(weaponFound));
+      return Response.json(weaponFound.map((item) => Weapon.fromJson(item)));
     } else {
       return NotFoundException.response(`Weapon with type ${type} not found`);
     }

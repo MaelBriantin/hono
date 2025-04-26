@@ -14,7 +14,7 @@ classes.get("/:name", (c) => {
 
 classes.get("/type/:type", (c) => {
   const type = c.req.param("type").toLowerCase();
-  return WeaponController.getWeaponByType(type)
+  return WeaponController.getWeaponsByType(type)
 });
 
 export default classes;

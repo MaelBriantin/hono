@@ -4,7 +4,7 @@
     "description": "A large two-handed sword, perfect for powerful slashes.",
     "type": "Sword",
     "allowedClasses": [
-      "Rogue"
+      "Berserker"
     ]
   },
   {
