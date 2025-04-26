@@ -12,7 +12,9 @@
     "jsr:@std/assert@0.221": "0.221.0",
     "jsr:@std/assert@1": "1.0.13",
     "jsr:@std/async@0.217": "0.217.0",
+    "jsr:@std/dotenv@*": "0.217.0",
     "jsr:@std/dotenv@0.217": "0.217.0",
+    "jsr:@std/dotenv@~0.225.3": "0.225.3",
     "jsr:@std/encoding@0.217": "0.217.0",
     "jsr:@std/encoding@0.221": "0.221.0",
     "jsr:@std/flags@0.217": "0.217.0",
@@ -42,7 +44,7 @@
         "jsr:@denosaurs/tty@0.2.1",
         "jsr:@denosaurs/wait",
         "jsr:@std/async",
-        "jsr:@std/dotenv",
+        "jsr:@std/dotenv@0.217",
         "jsr:@std/encoding@0.217",
         "jsr:@std/flags",
         "jsr:@std/fmt@0.217",
@@ -92,6 +94,9 @@
     },
     "@std/dotenv@0.217.0": {
       "integrity": "e65cbbf669f482c320b2f94d0a2fc536f1fcd06afdcfa4fde358129a18d1d428"
+    },
+    "@std/dotenv@0.225.3": {
+      "integrity": "a95e5b812c27b0854c52acbae215856d9cce9d4bbf774d938c51d212711e8d4a"
     },
     "@std/encoding@0.217.0": {
       "integrity": "b03e8ff94c98d6b6a02c02c5cf8e5d203400155516248964fc4559abc04669dc"
@@ -159,7 +164,8 @@
       "jsr:@db/sqlite@0.12",
       "jsr:@deno/deployctl@^1.13.1",
       "jsr:@hono/hono@^4.7.7",
-      "jsr:@std/assert@1"
+      "jsr:@std/assert@1",
+      "jsr:@std/dotenv@~0.225.3"
     ]
   }
 }
