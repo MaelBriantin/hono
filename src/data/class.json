@@ -1,19 +1,7 @@
 [
   {
-    "name": "Warrior",
-    "description": "A strong and resilient fighter, skilled in melee combat."
-  },
-  {
     "name": "Wizard",
     "description": "A master of the arcane arts, wielding powerful spells."
-  },
-  {
-    "name": "Rogue",
-    "description": "A stealthy and agile character, adept at sneaking and dealing critical damage."
-  },
-  {
-    "name": "Cleric",
-    "description": "A holy warrior, capable of healing and supporting allies."
   },
   {
     "name": "Berserker",
