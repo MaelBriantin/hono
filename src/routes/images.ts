@@ -1,4 +1,5 @@
 import { Hono } from "@hono/hono";
+import { InternalServerException, NotFoundException } from "../utils/exceptions.ts";
 
 const images = new Hono();
 
@@ -18,13 +19,10 @@ images.get("/:name", async (c) => {
       },
     });
   } catch (error) {
-    console.error("Error:", error);
     if (error instanceof Deno.errors.NotFound) {
-      console.error(`File not found at path calculated for: ${name}`);
-      return c.notFound();
+      return NotFoundException.response(`Image ${name}.png not found`);
     }
-    console.error(`Error serving image ${name}.png:`, error);
-    return c.text("Internal Server Error", 500);
+    return InternalServerException.response();
   }
 });
 

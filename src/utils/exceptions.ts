@@ -37,3 +37,22 @@ export class InvalidArgumentException extends Error {
     });
   }
 }
+
+export class InternalServerException extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "InternalServerError";
+  }
+  static response(message?: string): Response {
+    return Response.json(
+      {
+        "error": message || "Internal Server Error",
+      },
+      {
+        status: 500,
+        headers: {
+          "Content-Type": "application/json",
+        },
+    });
+  }
+}
