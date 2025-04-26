@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Claymore",
+    "description": "A large two-handed sword, perfect for powerful slashes.",
+    "type": "Sword"
+  },
+  {
+    "name": "Short Sword",
+    "description": "A quick and agile weapon, ideal for fast-paced combat.",
+    "type": "Sword"
+  },
+  {
+    "name": "Longbow",
+    "description": "A ranged weapon that allows for long-distance attacks.",
+    "type": "Bow"
+  },
+  {
+    "name": "Dagger",
+    "description": "A small, quick weapon ideal for stealthy attacks.",
+    "type": "Dagger"
+  },
+  {
+    "name": "Staff",
+    "description": "A magical weapon used to channel spells and enhance magical abilities.",
+    "type": "Staff"
+  },
+  {
+    "name": "Battle Axe",
+    "description": "A heavy axe designed for brutal melee combat.",
+    "type": "Axe"
+  }
+]
