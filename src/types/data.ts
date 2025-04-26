@@ -1,6 +1,7 @@
 type Class = {
   name: string;
   description: string;
+  image?: string | null;
 }
 
 enum WeaponType {

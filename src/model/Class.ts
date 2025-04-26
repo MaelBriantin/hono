@@ -5,7 +5,7 @@ class Class {
   constructor(
     public name: string,
     public description: string,
-    public image: string,
+    public image: string | null = null,
   ) {}
 
   static fromJson(json: ClassData): Class {
