@@ -1,30 +1,20 @@
 import { Hono } from "@hono/hono";
-import weaponFile from "../data/weapon.json" with { type: "json" };
+import WeaponController from "../controllers/WeaponController.ts";
 
 const classes = new Hono();
 
-classes.get("/", (c) => {
-  return c.json(weaponFile);
+classes.get("/", () => {
+  return WeaponController.getAllWeapons();
 });
 
 classes.get("/:name", (c) => {
   const name = c.req.param("name").toLowerCase();
-  const weaponData = weaponFile.find((item) => item.name && item.name.toLowerCase() === name);
-  if (weaponData) {
-    return c.json(weaponData);
-  } else {
-    return c.notFound();
-  }
+  return WeaponController.getWeaponByName(name)
 });
 
 classes.get("/type/:type", (c) => {
   const type = c.req.param("type").toLowerCase();
-  const weaponData = weaponFile.filter((item) => item.type && item.type.toLowerCase() === type);
-  if (weaponData.length > 0) {
-    return c.json(weaponData);
-  } else {
-    return c.notFound();
-  }
+  return WeaponController.getWeaponByType(type)
 });
 
 export default classes;

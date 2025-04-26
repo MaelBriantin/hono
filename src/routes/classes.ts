@@ -1,20 +1,14 @@
 import { Hono } from "@hono/hono";
-import classFile from "../data/class.json" with { type: "json" };
-
+import ClassController from "../controllers/ClassController.ts";
 const classes = new Hono();
 
-classes.get("/", (c) => {
-  return c.json(classFile);
+classes.get("/", () => {
+  return ClassController.getAllClasses();
 });
 
 classes.get("/:name", (c) => {
   const name = c.req.param("name").toLowerCase();
-  const classData = classFile.find((item) => item.name && item.name.toLowerCase() === name);
-  if (classData) {
-    return c.json(classData);
-  } else {
-    return c.notFound();
-  }
+  return ClassController.getClassByName(name);
 });
 
 export default classes;
